@@ -1,0 +1,19 @@
+{
+  "name": "runai",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "postcss ./public/css/input.css -o ./public/css/tailwind.css",
+    "watch": "postcss ./public/css/input.css -o ./public/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "autoprefixer": "^10.4.22",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0",
+    "sass": "^1.83.0",
+    "tailwindcss": "^4.1.17"
+  }
+}

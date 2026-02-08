@@ -1,0 +1,28 @@
+:focus {
+  outline: none;
+}
+// remnove arrow input number
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.apexcharts-toolbar {
+  .apexcharts-menu {
+    @apply min-w-29;
+    &-item {
+      @apply text-xs;
+    }
+  }
+}
+
+// datetime picker
+.flatpickr-wrapper {
+  width: 100%;
+}

@@ -1,0 +1,60 @@
+.group-chat {
+  span.icon {
+    &.icon-folder-item {
+      background: url("../images/ic-folder-item-25112025.svg");
+    }
+    &.icon-arrow-r {
+      background: url("../images/ic-arrow-r-25112025.svg");
+    }
+    &.icon-folder-add {
+      background: url("../images/ic-folder-add-25112025.svg");
+    }
+    &.icon-plus-assistant {
+      background: url("../images/ic-plus-btn-25112025.svg");
+    }
+    &.icon-conversation {
+      background: url("../images/ic-conversation-25112025.svg");
+    }
+    &.icon-toggle-thread {
+      background: url("../images/ic-collapse-close-25112025.svg");
+    }
+  }
+  .wrap-chat {
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: none;
+    }
+    &::-webkit-scrollbar {
+      width: 3px;
+      background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: var(--color-dark-gray);
+    }
+  }
+}
+
+.lightm {
+  span.icon {
+    &.icon-folder-item {
+      background: url("../images/ic-folder-item-light-25112025.svg");
+    }
+    &.icon-folder-add {
+      background: url("../images/ic-folder-add-lightm-25112025.svg");
+    }
+    &.icon-plus-assistant {
+      background: url("../images/ic-plus-btn-light-25112025.svg");
+    }
+    &.icon-toggle-thread {
+      background: url("../images/ic-collapse-close-light-25112025.svg");
+    }
+  }
+  .btn-new-assistant {
+    &:hover {
+      .icon-plus-assistant {
+        background: url("../images/ic-plus-btn-25112025.svg");
+      }
+    }
+  }
+}

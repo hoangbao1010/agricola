@@ -1,0 +1,10 @@
+/* loading chat */
+.spinner > div {
+  animation: sk-bouncedelay 1.2s infinite ease-in-out both;
+}
+.spinner .bounce1 {
+  animation-delay: -0.32s;
+}
+.spinner .bounce2 {
+  animation-delay: -0.16s;
+}

@@ -1,0 +1,75 @@
+span {
+  &.icon {
+    background-size: contain !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    &.icon-carret-d-select {
+      background: url("../images/ic-carret-down-25112025.svg");
+    }
+    &.icon-bookmark-chat {
+      background: url("../images/ic-bookmark-26112025.svg");
+    }
+    &.icon-report-chat {
+      background: url("../images/ic-report-26112025.svg");
+    }
+    &.icon-new-chat-header {
+      background: url("../images/ic-newchat-26112025.svg");
+    }
+    &.icon-share-chat-header {
+      background: url("../images/ic-share-26112025.svg");
+    }
+    &.icon-edit-title-chat {
+      background: url("../images/ic-edit-title-26112025.svg");
+    }
+    &.icon-refresh-chat {
+      background: url("../images/ic-refresh-26112025.svg");
+    }
+    &.icon-dots-setting {
+      background: url("../images/ic-dots-setting-26112025.svg");
+    }
+    &.icon-copy-chat {
+      background: url("../images/ic-copy-chat-26112025.svg");
+    }
+    &.icon-search-assistant {
+      background: url("../images/ic-search-ustool-27112025.svg");
+    }
+    &.icon-document-ustool {
+      background: url("../images/ic-document-ustool-27112025.svg");
+    }
+  }
+}
+
+.lightm {
+  span.icon {
+    &.icon-bookmark-chat {
+      background: url("../images/ic-report-light-26112025.svg");
+    }
+    &.icon-report-chat {
+      background: url("../images/ic-report-light-26112025.svg");
+    }
+    &.icon-new-chat-header {
+      background: url("../images/ic-newchat-light-26112025.svg");
+    }
+    &.icon-share-chat-header {
+      background: url("../images/ic-share-light-26112025.svg");
+    }
+    &.icon-edit-title-chat {
+      background: url("../images/ic-edit-title-light-26112025.svg");
+    }
+    &.icon-refresh-chat {
+      background: url("../images/ic-refresh-light-26112025.svg");
+    }
+    &.icon-dots-setting {
+      background: url("../images/ic-dots-setting-light-26112025.svg");
+    }
+    &.icon-copy-chat {
+      background: url("../images/ic-copy-chat-light-26112025.svg");
+    }
+    &.icon-search-assistant {
+      background: url("../images/ic-search-ustool-light-27112025.svg");
+    }
+    &.icon-document-ustool {
+      background: url("../images/ic-document-ustool-lightm-27112025.svg");
+    }
+  }
+}

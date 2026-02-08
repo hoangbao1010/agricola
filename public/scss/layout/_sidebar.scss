@@ -1,0 +1,186 @@
+.sidebar-left {
+  &.active {
+    left: 0;
+  }
+  .menu-item {
+    span.icon {
+      &.icon-chat {
+        background: url("../images/ic-chat-18112025.svg");
+      }
+      &.icon-agents {
+        background: url("../images/ic-agent-18112025.svg");
+      }
+      &.icon-prompt {
+        background: url("../images/ic-prompt-18112025.svg");
+      }
+      &.icon-plugin {
+        background: url("../images/ic-plugin-18112025.svg");
+      }
+      &.icon-model {
+        background: url("../images/ic-model-18112025.svg");
+      }
+      &.icon-kb {
+        background: url("../images/ic-kb-18112025.svg");
+      }
+      &.icon-team {
+        background: url("../images/ic-teams-18112025.svg");
+      }
+      &.icon-setting {
+        background: url("../images/ic-setting-18112025.svg");
+      }
+    }
+    &:hover {
+      background-color: var(--color-transparent-white);
+      span.icon {
+        &.icon-chat {
+          background: url("../images/ic-chat-active-18112025.svg");
+        }
+        &.icon-agents {
+          background: url("../images/ic-agent-active-18112025.svg");
+        }
+        &.icon-prompt {
+          background: url("../images/ic-prompt-active-18112025.svg");
+        }
+        &.icon-plugin {
+          background: url("../images/ic-plugin-active-18112025.svg");
+        }
+        &.icon-model {
+          background: url("../images/ic-model-active-18112025.svg");
+        }
+        &.icon-kb {
+          background: url("../images/ic-kb-active-18112025.svg");
+        }
+        &.icon-team {
+          background: url("../images/ic-teams-active-18112025.svg");
+        }
+        &.icon-setting {
+          background: url("../images/ic-setting-active-18112025.svg");
+        }
+      }
+    }
+  }
+  &_bot {
+    span.icon {
+      &.icon-runai-person {
+        background: url("../images/ic-user-setting-25112025.svg");
+      }
+      &.icon-lang-setting {
+        background: url("../images/ic-language-setting-26112025.svg");
+      }
+      &.icon-theme-setting {
+        background: url("../images/ic-theme-setting-26112025.svg");
+      }
+      &.icon-about-setting {
+        background: url("../images/ic-aboutus-setting-26112025.svg");
+      }
+      &.icon-logout-setting {
+        background: url("../images/ic-logout-setting-26112025.svg");
+      }
+      &.icon-change-theme {
+        background: url("../images/ic-moon-setting-26112025.svg");
+      }
+      &.icon-light-mode {
+        background: url("../images/ic-light-setting-26112025.svg");
+      }
+      &.icon-dark-mode {
+        background: url("../images/ic-moon-setting-26112025.svg");
+      }
+      &.icon-system-mode {
+        background: url("../images/ic-system-setting-26112025.svg");
+      }
+    }
+  }
+}
+
+.lightm {
+  .sidebar-left {
+    .menu-item {
+      &:hover {
+        background-color: white;
+      }
+      span.icon {
+        &.icon-chat {
+          background: url("../images/ic-chat-light-18112025.svg");
+        }
+        &.icon-agents {
+          background: url("../images/ic-agent-light-18112025.svg");
+        }
+        &.icon-prompt {
+          background: url("../images/ic-prompt-light-18112025.svg");
+        }
+        &.icon-plugin {
+          background: url("../images/ic-plugin-light-18112025.svg");
+        }
+        &.icon-model {
+          background: url("../images/ic-model-light-18112025.svg");
+        }
+        &.icon-kb {
+          background: url("../images/ic-kb-light-18112025.svg");
+        }
+        &.icon-team {
+          background: url("../images/ic-teams-light-18112025.svg");
+        }
+        &.icon-setting {
+          background: url("../images/ic-setting-light-18112025.svg");
+        }
+      }
+      &:hover {
+        span.icon {
+          &.icon-chat {
+            background: url("../images/ic-chat-light-active-18112025.svg");
+          }
+          &.icon-agents {
+            background: url("../images/ic-agent-light-active-18112025.svg");
+          }
+          &.icon-prompt {
+            background: url("../images/ic-prompt-light-active-18112025.svg");
+          }
+          &.icon-plugin {
+            background: url("../images/ic-plugin-light-active-18112025.svg");
+          }
+          &.icon-model {
+            background: url("../images/ic-model-light-active-18112025.svg");
+          }
+          &.icon-kb {
+            background: url("../images/ic-kb-light-active-18112025.svg");
+          }
+          &.icon-team {
+            background: url("../images/ic-teams-light-active-18112025.svg");
+          }
+          &.icon-setting {
+            background: url("../images/ic-setting-light-active-18112025.svg");
+          }
+        }
+      }
+    }
+
+    &_bot {
+      span.icon {
+        &.icon-runai-person {
+          background: url("../images/ic-user-setting-lightm-25112025.svg");
+        }
+        &.icon-lang-setting {
+          background: url("../images/ic-language-setting-lightm-26112025.svg");
+        }
+        &.icon-theme-setting {
+          background: url("../images/ic-theme-setting-lightm-26112025.svg");
+        }
+        &.icon-about-setting {
+          background: url("../images/ic-aboutus-setting-lightm-26112025.svg");
+        }
+        &.icon-logout-setting {
+          background: url("../images/ic-logout-setting-lightm-26112025.svg");
+        }
+        &.icon-light-mode {
+          background: url("../images/ic-light-setting-light-26112025.svg");
+        }
+        &.icon-dark-mode {
+          background: url("../images/ic-moon-setting-light-26112025.svg");
+        }
+        &.icon-system-mode {
+          background: url("../images/ic-system-setting-light-26112025.svg");
+        }
+      }
+    }
+  }
+}

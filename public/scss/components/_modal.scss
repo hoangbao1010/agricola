@@ -1,0 +1,14 @@
+.popup {
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: none;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color-dark-gray);
+  }
+}

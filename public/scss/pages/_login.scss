@@ -1,0 +1,43 @@
+.auth_login {
+  span.icon {
+    &.keycloak-login {
+      background: url("../images/keycloak-svgrepo-com.svg");
+    }
+    &.gmail-login {
+      background: url("../images/ic-google-login-12032025.svg");
+    }
+    &.facebook-login {
+      background: url("../images/ic-fb-login-03122025.svg");
+    }
+  }
+  .toggle-input {
+    span {
+      background: url("../images/ic-eye-close-login-1401.svg");
+      &.active {
+        background: url("../images/ic-eye-open-login-1401.svg");
+      }
+    }
+  }
+  .remember-me {
+    input[type="checkbox"]:checked + label {
+      &::after {
+        content: url("../images/cb-remember-1301.svg");
+        position: absolute;
+        top: 0;
+        left: 4px;
+      }
+    }
+  }
+}
+.lightm {
+  .auth_login {
+    .toggle-input {
+      span {
+        background: url("../images/ic-eye-close-login-light-1401.svg");
+        &.active {
+          background: url("../images/ic-eye-open-login-light-1401.svg");
+        }
+      }
+    }
+  }
+}

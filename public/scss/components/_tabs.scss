@@ -1,0 +1,19 @@
+.show_hide_tab {
+  li {
+    &.tab-current {
+      background: white;
+      color: black;
+    }
+  }
+}
+
+.lightm {
+  .show_hide_tab {
+    li {
+      &.tab-current {
+        background: var(--color-gainsboro);
+        color: black;
+      }
+    }
+  }
+}

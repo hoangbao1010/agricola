@@ -1,0 +1,85 @@
+.chatbox {
+  textarea {
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background: none;
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: var(--color-dark-gray);
+    }
+  }
+  span.icon {
+    &.icon-personalize-form {
+      background: url("../images/ic-person-24112025.svg");
+    }
+    &.icon-upload-file {
+      background: url("../images/ic-upload-file-28112025.svg");
+    }
+    &.icon-attach-file {
+      background: url("../images/ic-attach-24112025.svg");
+    }
+    &.icon-record {
+      background: url("../images/ic-record-24112025.svg");
+    }
+    &.icon-send {
+      background: url("../images/ic-send-24112025.svg");
+    }
+    &.icon-from-drive {
+      background: url("../images/ic-report-26112025.svg");
+    }
+    &.icon-custom-tools {
+      background: url("../images/ic-setting-24112025.svg");
+    }
+    &.icon-carret-up-tools {
+      background: url("../images/ic-carret-up-24112025.svg");
+    }
+    &.icon-gmail {
+      background: url("../images/ic-gmail-24112025.svg");
+    }
+    &.icon-gg-calendar {
+      background: url("../images/ic-calendar-24112025.svg");
+    }
+    &.icon-gg-drive {
+      background: url("../images/ic-drive-24112025.svg");
+    }
+    &.icon-doc {
+      background: url("../images/ic-chat-24112025.svg");
+    }
+  }
+}
+
+.lightm {
+  .chatbox {
+    span.icon {
+      &.icon-personalize-form {
+        background: url("../images/ic-person-light-24112025.svg");
+      }
+      &.icon-upload-file {
+        background: url("../images/ic-upload-file-light-28112025.svg");
+      }
+      &.icon-attach-file {
+        background: url("../images/ic-attach-light-24112025.svg");
+      }
+      &.icon-record {
+        background: url("../images/ic-record-light-24112025.svg");
+      }
+      &.icon-send {
+        background: url("../images/ic-send-light-24112025.svg");
+      }
+      &.icon-from-drive {
+        background: url("../images/ic-report-lightm-26112025.svg");
+      }
+      &.icon-custom-tools {
+        background: url("../images/ic-setting-light-24112025.svg");
+      }
+      &.icon-carret-up-tools {
+        background: url("../images/ic-carret-up-light-24112025.svg");
+      }
+    }
+  }
+}
