@@ -110,21 +110,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // slider
-  // Sử dụng document.querySelector thay cho jQuery(".class").length
-  const partnerNews = document.querySelector(".customer-hp");
+  const partnerNews = document.querySelector(".customer-section");
 
   if (partnerNews) {
-    // Khởi tạo Swiper trực tiếp
-    const swiper = new Swiper(".customer-hp .swiper", {
+    const swiper = new Swiper(".customer-section .swiper", {
       slidesPerView: 1,
       spaceBetween: 24,
       loop: true,
       navigation: {
-        nextEl: ".customer-hp .sl-next",
-        prevEl: ".customer-hp .sl-prev",
+        nextEl: ".customer-section .sl-next",
+        prevEl: ".customer-section .sl-prev",
       },
       pagination: {
-        el: ".customer-hp .swiper-pagination",
+        el: ".customer-section .swiper-pagination",
         clickable: true,
       },
       breakpoints: {

@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="vi">
+<html lang="vi" class="overflow-x-hidden">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agricola</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, orientation=portrait" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     <link rel="stylesheet" href="css/font-awesome.min.css?v=1768532365" />
     <link rel="stylesheet" href="css/jquery.fancybox.min.css?v=1768532365" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css?v=1768532365" />
@@ -16,14 +19,14 @@
       rel="stylesheet"
     />
   </head>
-  <body class="text-gordons-green relative">
+  <body class="text-gordons-green relative overflow-x-hidden">
     <header class="absolute top-0 left-0 w-full z-99">
-      <div class="py-5 px-15 flex justify-between items-center">
-        <a href="#" class="inline-block my-2">
-          <img src="images/logo-inverse.png" loading="eager" />
+      <div class="lg:py-5 lg:px-15 py-5 px-4 flex justify-between items-center">
+        <a href="#" class="inline-block lg:my-2">
+          <img src="images/logo-inverse.png" class="w-full max-w-37.5 md:w-auto md:max-w-none" />
         </a>
         <div class="flex items-center gap-6">
-          <ul class="flex items-center gap-4">
+          <ul class="hidden lg:flex items-center gap-4">
             <li>
               <a href="#" class="text-white-c relative">Home</a>
             </li>
@@ -40,32 +43,65 @@
               <a href="#" class="text-white-c relative">Contacts</a>
             </li>
           </ul>
-          <div class="cart-hd relative">
-            <i class="fa fa-shopping-cart text-white-c cursor-pointer" aria-hidden="true"></i>
-            <span class="text-10 bg-amber text-white-c text-center rounded-full font-medium absolute bottom-0">0</span>
+          <div class="icon_mobile_click inline-block cursor-pointer lg:hidden inline-block">
+            <i class="fa fa-bars text-white-c cursor-pointer !text-2xl" aria-hidden="true"></i>
           </div>
-          <div class="search-hd">
-            <i class="fa fa-search text-white-c cursor-pointer" aria-hidden="true"></i>
+          <div class="cart-header relative">
+            <i class="fa fa-shopping-cart text-white-c cursor-pointer !text-2xl" aria-hidden="true"></i>
+            <span class="text-10 bg-amber text-white-c text-center rounded-full font-medium absolute bottom-0 -right-2 w-4 h-4">0</span>
+          </div>
+          <div class="search-header">
+            <i class="fa fa-search text-white-c cursor-pointer !text-2xl" aria-hidden="true"></i>
+            <div class="search-header__background hidden fixed w-full h-full bg-gordons-green-20 top-0 left-0 -z-1"></div>
+            <div
+              class="search-header__overlay lg:h-105 h-85 fixed left-0 transition-all duration-300 bg-gordons-green w-full lg:pt-15 lg:pb-20 pt-5 pb-10 shadow-soft-light"
+            >
+              <div class="mx-auto max-w-6xl px-4">
+                <div class="flex items-center justify-between">
+                  <img src="images/logo-inverse.png" class="max-w-37.5 md:w-auto md:max-w-none" />
+                  <i
+                    class="fa fa-times text-white-c cursor-pointer !text-3xl transition-all duration-300 hover:rotate-[var(--rotate-360)]"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+                <form action="">
+                  <div class="pt-30 flex items-center justify-between gap-4 relative pb-2.5 border-b border-solid border-sub-white">
+                    <input type="text" class="lg:text-27 text-2xl w-full text-white-c" name="s" placeholder="Type words and hit enter" />
+                    <input type="hidden" name="post_type" value="product" />
+                    <button type="submit">
+                      <svg class="cursor-pointer" width="29" height="28" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="13.8667" cy="13.5333" r="8.86667" stroke="white" stroke-width="1.5"></circle>
+                        <path d="M20.3984 20.0667L23.6651 23.3333" stroke="white" stroke-width="1.5" stroke-linecap="round"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <div>
       <div class="relative h-screen">
-        <video autoplay="" muted="" loop="" preload="auto" class="absolute top-0 left-0 w-full">
+        <video autoplay="" muted="" loop="" preload="auto" class="absolute top-0 left-0 w-full h-full object-cover -z-1">
           <source src="video/slider-video-bg.mp4" type="video/mp4" />
         </video>
-        <div class="lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 text-center">
-          <span class="text-lg text-white-c">Cultivating Agriculture that Works for the Future</span>
-          <h1 class="text-50 text-white-c font-semibold leading-47 mt-2">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-[var(--width-85)]">
+          <span class="hidden sm:block text-lg text-white-c">Cultivating Agriculture that Works for the Future</span>
+          <h1 class="text-4xl sm:text-50 text-white-c font-semibold leading-47 mt-2">
             Our Agricultural <br />
             Company
           </h1>
-          <a href="#" class="mt-5 mx-auto table px-8 py-4 bg-amber text-sm font-bold text-white-c uppercase text-center">Contacts us now</a>
+          <a
+            href="#"
+            class="mt-5 mx-auto table lg:px-8 px-4 lg:py-4 py-3 bg-amber text-sm lg:font-bold font-semibold text-white-m text-white-c uppercase text-center"
+            >Contacts us now</a
+          >
         </div>
       </div>
-      <div class="about-hp bg-merino relative py-25">
-        <div class="mx-auto max-w-6xl">
+      <div class="about-section bg-merino relative lg:py-25 py-15">
+        <div class="mx-auto max-w-6xl px-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50.322" viewBox="0 0 50 50.322" class="table mx-auto">
             <g transform="translate(-0.394 0.03)">
               <path
@@ -253,95 +289,138 @@
             </g>
           </svg>
           <span class="text-sm uppercase font-semibold table mt-7 mx-auto">Our Agricultural Company</span>
-          <h2 class="text-50 leading-57 table mx-auto text-center mt-3 font-bold">
+          <h2 class="lg:text-50 sm:text-4xl text-2xl lg:leading-57 table mx-auto text-center mt-3 font-bold">
             We’re a World-Leading <br />
             Provider of Organic Products
           </h2>
-          <div class="flex gap-8 mt-25">
-            <div class="w-4-cols">
-              <img src="images/custom-img-1-copyright.jpg" alt="" class="object-cover w-full transition-all duration-300" />
-              <div class="mt-8">
+          <div class="sm:flex sm:gap-8 gap-5 grid grid-cols-2 lg:mt-25 mt-7.5">
+            <div class="lg:w-4-cols w-full group">
+              <img
+                src="images/custom-img-1-copyright.jpg"
+                alt=""
+                class="object-cover w-full transition-all duration-300 lg:h-70 h-44 group-hover:-translate-y-2.5"
+              />
+              <div class="lg:mt-8 mt-4">
                 <h3 class="text-22 font-bold">Soft Wheat</h3>
-                <ul class="mt-4 text-chicago">
-                  <li class="relative text-15">Lorem Ipsum</li>
-                  <li class="relative text-15">Nam Semper</li>
-                  <li class="relative text-15">Etiam Molesti</li>
+                <ul class="lg:mt-4 mt-1.5 text-chicago">
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Lorem Ipsum
+                  </li>
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Nam Semper
+                  </li>
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Etiam Molesti
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="w-4-cols">
-              <img src="images/custom-img-1-copyright.jpg" alt="" class="object-cover w-full transition-all duration-300" />
-              <div class="mt-8">
-                <h3 class="text-22 font-bold">Garden Tillage</h3>
-                <ul class="mt-4 text-chicago">
-                  <li class="relative text-15">Lorem Ipsum</li>
-                  <li class="relative text-15">Nam Semper</li>
-                  <li class="relative text-15">Etiam Molesti</li>
+            <div class="lg:w-4-cols w-full group lg:mt-15 sm:mt-10 mt-0">
+              <img
+                src="images/custom-img-1-copyright.jpg"
+                alt=""
+                class="object-cover w-full transition-all duration-300 lg:h-70 h-44 group-hover:-translate-y-2.5"
+              />
+              <div class="lg:mt-8 mt-4">
+                <h3 class="text-22 font-bold">Soft Wheat</h3>
+                <ul class="lg:mt-4 mt-1.5 text-chicago">
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Lorem Ipsum
+                  </li>
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Nam Semper
+                  </li>
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Etiam Molesti
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="w-4-cols">
-              <img src="images/custom-img-1-copyright.jpg" alt="" class="object-cover w-full transition-all duration-300" />
-              <div class="mt-8">
-                <h3 class="text-22 font-bold">Vegatables</h3>
-                <ul class="mt-4 text-chicago">
-                  <li class="relative text-15">Lorem Ipsum</li>
-                  <li class="relative text-15">Nam Semper</li>
-                  <li class="relative text-15">Etiam Molesti</li>
+            <div class="lg:w-4-cols w-full group">
+              <img
+                src="images/custom-img-1-copyright.jpg"
+                alt=""
+                class="object-cover w-full transition-all duration-300 lg:h-70 h-44 group-hover:-translate-y-2.5"
+              />
+              <div class="lg:mt-8 mt-4">
+                <h3 class="text-22 font-bold">Soft Wheat</h3>
+                <ul class="lg:mt-4 mt-1.5 text-chicago">
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Lorem Ipsum
+                  </li>
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Nam Semper
+                  </li>
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Etiam Molesti
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="w-4-cols">
-              <img src="images/custom-img-1-copyright.jpg" alt="" class="object-cover w-full transition-all duration-300" />
-              <div class="mt-8">
-                <h3 class="text-22 font-bold">Farm Livestock</h3>
-                <ul class="mt-4 text-chicago">
-                  <li class="relative text-15">Lorem Ipsum</li>
-                  <li class="relative text-15">Nam Semper</li>
-                  <li class="relative text-15">Etiam Molesti</li>
+            <div class="lg:w-4-cols w-full group lg:mt-15 sm:mt-10 mt-0">
+              <img
+                src="images/custom-img-1-copyright.jpg"
+                alt=""
+                class="object-cover w-full transition-all duration-300 lg:h-70 h-44 group-hover:-translate-y-2.5"
+              />
+              <div class="lg:mt-8 mt-4">
+                <h3 class="text-22 lg:font-bold">Soft Wheat</h3>
+                <ul class="lg:mt-4 mt-1.5 text-chicago">
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Lorem Ipsum
+                  </li>
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Nam Semper
+                  </li>
+                  <li class="relative text-15 mt-1.5">
+                    <span class="relative -top-0.5 inline-block w-1.5 h-1.5 rounded-full bg-amber mr-2.5"></span> Etiam Molesti
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="wedo-hp pt-25 pb-180">
-        <div class="mx-auto max-w-6xl">
+      <div class="lg:pt-25 lg:pb-180 py-15">
+        <div class="mx-auto max-w-6xl px-4">
           <div class="w-3xl">
             <span class="text-sm uppercase font-semibold mt-7">What We Do</span>
-            <h2 class="lg:text-50 lg:leading-57 mt-3 font-bold">
+            <h2 class="lg:text-50 sm:text-4xl text-2xl lg:leading-57 mt-3 font-bold">
               Currently We Are Growing and <br />
               Selling Organic Food
             </h2>
           </div>
-          <div class="relative mt-8 flex gap-15">
-            <div class="w-3xl shrink-0">
-              <img src="images/background-9-copyright.jpg" alt="" class="object-cover w-full" />
+          <div class="relative lg:mt-8 mt-5 flex lg:gap-15 gap-5 lg:flex-nowrap flex-wrap">
+            <div class="lg:w-3xl w-full shrink-0">
+              <img src="images/background-9-copyright.jpg" alt="" class="object-cover w-full lg:h-142.5 sm:h-100 h-45" />
             </div>
-            <div class="grow text-17 text-chicago">
-              <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-              <p>Wiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
-              <a href="#" class="underline-btn relative text-17 font-bold pb-2.5">Read more</a>
+            <div class="grow w-full text-chicago">
+              <p class="lg:mb-7.5 mb-2.5">
+                Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.
+              </p>
+              <p class="lg:mb-7.5 mb-2.5">Wiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+              <a
+                href="#"
+                class="relative text-17 text-gordons-green font-bold pb-2.5 before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-0 before:h-0.5 before:bg-gordons-green before:transition-all before:duration-300 hover:before:right-full"
+                >Read more</a
+              >
             </div>
-            <div class="w-xl absolute -bottom-15 right-0 lg:grid grid-cols-2 gap-5">
-              <div class="wedo-number text-17 text-white-c p-10">
+            <div class="lg:w-xl w-full lg:absolute relative lg:-bottom-15 right-0 sm:grid sm:grid-cols-2 gap-5 sm:mt-0 mt-7.5">
+              <div class="lg:text-17 text-white-c lg:p-10 py-7.5 px-5 bg-celery">
                 <strong class="text-lg font-semibold text-white-c">People</strong>
-                <b class="js-count-up block font-semibold text-6xl text-white-c font-bold mt-2" data-value="100">0</b>
-                <p class="block mt-4 text-sub-white">Adipiscing elit, do eiusm.</p>
+                <b class="js-count-up block font-semibold lg:text-6xl text-5xl text-white-c font-bold mt-2 after:content-['+']" data-value="100">0</b>
+                <p class="block lg:mt-4 mt-2 text-sub-white">Adipiscing elit, do eiusm.</p>
               </div>
-              <div class="wedo-number text-17 text-white-c p-10">
+              <div class="lg:text-17 text-white-c lg:p-10 py-7.5 px-5 bg-gordons-green sm:mt-0 mt-5">
                 <strong class="text-lg font-semibold text-white-c">World Offices</strong>
-                <b class="js-count-up block font-semibold text-6xl text-white-c font-bold mt-2" data-value="16">0</b>
-                <p class="block mt-4 text-sub-white">
-                  Sed do eiusmod <br />
-                  tempor.
-                </p>
+                <b class="js-count-up block font-semibold lg:text-6xl text-5xl text-white-c font-bold mt-2" data-value="16">0</b>
+                <p class="block lg:mt-4 mt-2 text-sub-white">Sed do eiusmod tempor.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="info-hp relative">
+      <div class="relative lg:px-0 px-4">
         <div class="lg:px-15">
           <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50.322" viewBox="0 0 50 50.322" class="table mx-auto">
             <g transform="translate(-0.394 0.03)">
@@ -530,17 +609,19 @@
             </g>
           </svg>
           <span class="text-sm uppercase font-semibold table mt-7 mx-auto">choose organic products</span>
-          <h2 class="text-50 leading-57 table mx-auto text-center mt-3 font-bold">
+          <h2 class="lg:text-50 sm:text-4xl text-2xl lg:leading-57 table mx-auto text-center mt-3 font-bold">
             Our Crop is Grown with Great <br />
             Care and Love for Nature
           </h2>
-          <div class="grid lg:grid-cols-2 pt-25">
-            <div class="ct-left lg:grid grid-cols-2 gap-7.5">
-              <img src="images/custom-img-5-copyright.jpg" alt="" class="object-cover w-full" />
+          <div class="grid lg:grid-cols-2 grid-cols-1 lg:pt-25 pt-7.5 lg:gap-0 gap-5">
+            <div class="ct-left grid grid-cols-2 lg:gap-7.5 gap-5">
+              <img src="images/custom-img-5-copyright.jpg" alt="" class="object-cover w-full lg:h-120 h-65" />
               <a href="https://www.youtube.com/watch?v=fAYrvIaiL3Y" class="fancybox relative block w-full h-full" data-fancybox="video">
-                <img src="images/custom-img-6-copyright.jpg" alt="" class="object-cover w-full" />
-                <div class="play-icon p-2 rounded-full lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2">
-                  <div class="bg-white-c rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <img src="images/custom-img-6-copyright.jpg" alt="" class="object-cover w-full lg:h-120 h-65" />
+                <div
+                  class="p-2 rounded-full h-21 w-21 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-2 border-solid border-[rgba(255,255,255,0.11)]"
+                >
+                  <div class="bg-white-c rounded-full h-15 w-15 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                     <svg
                       class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 transition-all duration-300"
                       xmlns="http://www.w3.org/2000/svg"
@@ -558,91 +639,103 @@
               </a>
             </div>
             <div class="lg:pl-22.5 lg:pr-30">
-              <div class="mb-10">
-                <h3 class="text-3xl font-bold">100% Organic</h3>
-                <p class="block mt-4 text-chicago">Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam doloremque.</p>
+              <div class="lg:mb-10 mb-7.5">
+                <h3 class="lg:text-3xl text-xl font-bold">100% Organic</h3>
+                <p class="block lg:mt-4 mt-2 text-chicago">
+                  Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam doloremque.
+                </p>
               </div>
-              <div class="mb-10">
-                <h3 class="text-3xl font-bold">100% Organic</h3>
-                <p class="block mt-4 text-chicago">Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam doloremque.</p>
+              <div class="lg:mb-10 mb-7.5">
+                <h3 class="lg:text-3xl text-xl font-bold">100% Organic</h3>
+                <p class="block lg:mt-4 mt-2 text-chicago">
+                  Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam doloremque.
+                </p>
               </div>
-              <div class="mb-10">
-                <h3 class="text-3xl font-bold">100% Organic</h3>
-                <p class="block mt-4 text-chicago">Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam doloremque.</p>
+              <div class="">
+                <h3 class="lg:text-3xl text-xl font-bold">100% Organic</h3>
+                <p class="block text-chicago">Natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam doloremque.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="customer-hp relative pt-25">
-        <div class="mx-auto max-w-6xl relative">
-          <div class="swiper mx-auto">
+      <div class="customer-section relative lg:pt-25 pt-15">
+        <div class="mx-auto max-w-6xl px-4 relative">
+          <div class="swiper mx-auto max-w-187.5">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="images/testimonials-image2-copyright-120x120.jpg" alt="" class="rounded-full object-cover table mx-auto" />
-                <p class="mt-10 mx-auto text-22 font-medium text-center">
+                <img
+                  src="images/testimonials-image2-copyright-120x120.jpg"
+                  alt=""
+                  class="rounded-full object-cover table mx-auto lg:w-25.5 lg:h-25.5"
+                />
+                <p class="lg:mt-10 mt-4 mx-auto lg:text-22 font-medium text-center">
                   Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed. Beatae vitae
                   dicta. Adipiscing elit, sed do eiusmod tempor incididunt. Nemo enim ipsam voluptatem.
                 </p>
-                <i class="fa fa-quote-right mx-auto mt-8 text-celery" aria-hidden="true"></i>
-                <h3 class="text-19 table mx-auto mt-8">Briana Woods</h3>
-                <span class="table mx-auto mt-1.5 text-chicago">Farmer</span>
+                <i class="fa fa-quote-right !table mx-auto lg:mt-8 mt-5 !text-2xl text-celery" aria-hidden="true"></i>
+                <h3 class="lg:text-19 table mx-auto lg:mt-8 mt-2">Briana Woods</h3>
+                <span class="table mx-auto mt-1.5 text-chicago lg:text-base text-sm">Farmer</span>
               </div>
               <div class="swiper-slide">
                 <img src="images/testimonials-image2-copyright-120x120.jpg" alt="" class="rounded-full object-cover table mx-auto" />
-                <p class="mt-10 mx-auto text-22 font-medium text-center">
+                <p class="lg:mt-10 mt-4 mx-auto lg:text-22 font-medium text-center">
                   Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed. Beatae vitae
                   dicta. Adipiscing elit, sed do eiusmod tempor incididunt. Nemo enim ipsam voluptatem.
                 </p>
-                <i class="fa fa-quote-right mx-auto mt-8 text-celery" aria-hidden="true"></i>
-                <h3 class="text-19 table mx-auto mt-8">Andrew Morris</h3>
-                <span class="table mx-auto mt-1.5 text-chicago">Owner</span>
+                <i class="fa fa-quote-right !table mx-auto lg:mt-8 mt-5 !text-2xl text-celery" aria-hidden="true"></i>
+                <h3 class="lg:text-19 table mx-auto lg:mt-8 mt-2">Andrew Morris</h3>
+                <span class="table mx-auto mt-1.5 text-chicago lg:text-base text-sm">Owner</span>
               </div>
               <div class="swiper-slide">
                 <img src="images/testimonials-image2-copyright-120x120.jpg" alt="" class="rounded-full object-cover table mx-auto" />
-                <p class="mt-10 mx-auto text-22 font-medium text-center">
+                <p class="lg:mt-10 mt-4 mx-auto lg:text-22 font-medium text-center">
                   Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed. Beatae vitae
                   dicta. Adipiscing elit, sed do eiusmod tempor incididunt. Nemo enim ipsam voluptatem.
                 </p>
-                <i class="fa fa-quote-right mx-auto mt-8 text-celery" aria-hidden="true"></i>
-                <h3 class="text-19 table mx-auto mt-8">Natalie Jones</h3>
-                <span class="table mx-auto mt-1.5 text-chicago">Owner</span>
+                <i class="fa fa-quote-right !table mx-auto lg:mt-8 mt-5 !text-2xl text-celery" aria-hidden="true"></i>
+                <h3 class="lg:text-19 table mx-auto lg:mt-8 mt-2">Natalie Jones</h3>
+                <span class="table mx-auto mt-1.5 text-chicago lg:text-base text-sm">Owner</span>
               </div>
             </div>
           </div>
-          <div class="sl-prev absolute top-1/2 left-0 bg-merino border border-merino cursor-pointer rounded-full transition-all duration-300">
+          <div
+            class="sl-prev hidden lg:block absolute top-1/2 left-0 bg-merino border border-merino cursor-pointer rounded-full transition-all duration-300"
+          >
             <i class="fa fa-long-arrow-left absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
           </div>
-          <div class="sl-next absolute top-1/2 right-0 bg-merino border border-merino cursor-pointer rounded-full transition-all duration-300">
+          <div
+            class="sl-next hidden lg:block absolute top-1/2 right-0 bg-merino border border-merino cursor-pointer rounded-full transition-all duration-300"
+          >
             <i class="fa fa-long-arrow-right absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" aria-hidden="true"></i>
           </div>
-          <div class="swiper-pagination mt-8"></div>
+          <div class="swiper-pagination lg:mt-8 mt-4"></div>
         </div>
       </div>
-      <div class="quality-hp relative py-25">
-        <div class="mx-auto max-w-6xl">
-          <div class="flex items-center">
-            <div class="w-1/2 lg:pr-30">
-              <span class="text-sm uppercase font-semibold mt-7">Quality Product</span>
-              <h2 class="lg:text-50 lg:leading-57 mt-3 font-bold">
+      <div class="relative lg:py-25 pt-15 pb-24">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="flex items-center gap-7.5 lg:gap-0 flex-wrap md:flex-nowrap">
+            <div class="lg:w-1/2 w-full lg:pr-30">
+              <span class="text-sm uppercase font-semibold lg:mt-7 mt-4">Quality Product</span>
+              <h2 class="lg:text-50 sm:text-4xl text-2xl lg:leading-57 mt-3 font-bold">
                 We Appreciate <br />
                 Your Trust Greatly
               </h2>
               <p class="block mt-4 text-chicago">Dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-              <div class="mt-11">
-                <div class="skill-item">
-                  <div class="flex items-center gap-4 justify-between mb-3">
-                    <span class="text-lg font-bold">Eco Farms Worldwide</span>
-                    <span class="skill-value text-lg font-bold">80%</span>
+              <div class="lg:mt-11 mt-4">
+                <div class="skill-item lg:mb-7.5 mb-4">
+                  <div class="flex items-center gap-4 justify-between lg:mb-3 mb-2">
+                    <span class="lg:text-lg text-base font-bold">Eco Farms Worldwide</span>
+                    <span class="skill-value lg:text-lg text-base font-bold">80%</span>
                   </div>
                   <div class="progress-line" data-progress="80%">
                     <span></span>
                   </div>
                 </div>
                 <div class="skill-item">
-                  <div class="flex items-center gap-4 justify-between mb-3">
-                    <span class="text-lg font-bold">Special Equipment</span>
-                    <span class="skill-value text-lg font-bold">90%</span>
+                  <div class="flex items-center gap-4 justify-between lg:mb-3 mb-2">
+                    <span class="lg:text-lg text-base font-bold">Special Equipment</span>
+                    <span class="skill-value lg:text-lg text-base font-bold">90%</span>
                   </div>
                   <div class="progress-line" data-progress="90%">
                     <span></span>
@@ -650,34 +743,40 @@
                 </div>
               </div>
             </div>
-            <div class="ct-right w-1/2 relative pl-25 flex justify-end">
-              <img src="images/custom-img-8-copyright.jpg" alt="" class="absolute bottom-0 left-0 object-cover z-1" />
-              <img src="images/custom-img-7-copyright.jpg" alt="" class="object-cover relative -top-8" />
+            <div class="lg:w-1/2 w-full relative pl-25 flex justify-end">
+              <img
+                src="images/custom-img-8-copyright.jpg"
+                alt=""
+                class="absolute lg:bottom-0 -bottom-8 left-0 object-cover z-1 lg:h-87.5 lg:w-87.5 w-50 h-50"
+              />
+              <img src="images/custom-img-7-copyright.jpg" alt="" class="object-cover relative lg:-top-8 top-0 lg:h-9 lg:w-110 lg:h-125 w-60 h-65" />
             </div>
           </div>
         </div>
       </div>
-      <div class="latestnew-hp bg-merino relative py-25">
-        <div class="mx-auto max-w-6xl">
+      <div class="bg-merino relative lg:py-25 py-15">
+        <div class="mx-auto max-w-6xl px-4">
           <span class="text-sm uppercase font-semibold table mx-auto">recent articles</span>
-          <h2 class="text-50 leading-57 table mx-auto text-center mt-3 font-bold">Our Latest News</h2>
-          <div class="lg:grid lg:grid-cols-3 gap-7.5 mt-8">
+          <h2 class="lg:text-50 sm:text-4xl text-2xl lg:leading-57 leading-inherit table mx-auto text-center mt-3 font-bold">Our Latest News</h2>
+          <div class="grid sm:grid-cols-3 lg:gap-7.5 gap-5 sm:mt-8 mt-7.5">
             <div class="group">
               <div class="overflow-hidden">
                 <a href="#"
                   ><img
                     src="images/typography-image1-copyright-890x664.jpg"
                     alt=""
-                    class="object-cover w-full transition-all duration-300 group-hover:scale-110"
+                    class="object-cover w-full transition-all duration-300 lg:h-65 sm:h-40 h-62.5 group-hover:scale-110"
                 /></a>
               </div>
-              <div class="bg-white-c p-7">
-                <div class="text-sm">
+              <div class="bg-white-c lg:p-7 p-5">
+                <div class="text-sm sm:flex sm:gap-4">
                   <a href="#" class="uppercase font-bold transition-all duration-300 hover:text-amber">Organic</a>
-                  <a href="#" class="text-zorba relative pl-8 inline-block transition-all duration-300 hover:text-gordons-green">April 21, 2020</a>
+                  <a href="#" class="text-zorba relative lg:pl-8 sm:pl-0 inline-block transition-all duration-300 hover:text-gordons-green"
+                    ><span class="sm:hidden block relative -top-0.5 inline-block w-1 h-1 rounded-full bg-zorba mx-4"></span> April 21, 2020</a
+                  >
                 </div>
-                <h3 class="mt-3.5 text-2xl font-bold">
-                  <a href="#" class="transition-all duration-300 line-clamp-2 hover:text-chicago">Simple Ways to Plan and Execute Your Harvest</a>
+                <h3 class="mt-3.5 sm:text-2xl text-xl font-bold">
+                  <a href="#" class="transition-all duration-300 lg:line-clamp-2 hover:text-chicago">Simple Ways to Plan and Execute Your Harvest</a>
                 </h3>
               </div>
             </div>
@@ -687,16 +786,18 @@
                   ><img
                     src="images/typography-image1-copyright-890x664.jpg"
                     alt=""
-                    class="object-cover w-full transition-all duration-300 group-hover:scale-110"
+                    class="object-cover w-full transition-all duration-300 lg:h-65 sm:h-40 h-62.5 group-hover:scale-110"
                 /></a>
               </div>
-              <div class="bg-white-c p-7">
-                <div class="text-sm">
+              <div class="bg-white-c lg:p-7 p-5">
+                <div class="text-sm sm:flex sm:gap-4">
                   <a href="#" class="uppercase font-bold transition-all duration-300 hover:text-amber">Organic</a>
-                  <a href="#" class="text-zorba relative pl-8 inline-block transition-all duration-300 hover:text-gordons-green">April 21, 2020</a>
+                  <a href="#" class="text-zorba relative lg:pl-8 sm:pl-0 inline-block transition-all duration-300 hover:text-gordons-green"
+                    ><span class="sm:hidden block relative -top-0.5 inline-block w-1 h-1 rounded-full bg-zorba mx-4"></span> April 21, 2020</a
+                  >
                 </div>
-                <h3 class="mt-3.5 text-2xl font-bold">
-                  <a href="#" class="transition-all duration-300 line-clamp-2 hover:text-chicago">Why Farmers Should Digitalize Production</a>
+                <h3 class="mt-3.5 sm:text-2xl text-xl font-bold">
+                  <a href="#" class="transition-all duration-300 lg:line-clamp-2 hover:text-chicago">Simple Ways to Plan and Execute Your Harvest</a>
                 </h3>
               </div>
             </div>
@@ -706,37 +807,38 @@
                   ><img
                     src="images/typography-image1-copyright-890x664.jpg"
                     alt=""
-                    class="object-cover w-full transition-all duration-300 group-hover:scale-110"
+                    class="object-cover w-full transition-all duration-300 lg:h-65 sm:h-40 h-62.5 group-hover:scale-110"
                 /></a>
               </div>
-              <div class="bg-white-c p-7">
-                <div class="text-sm">
+              <div class="bg-white-c lg:p-7 p-5">
+                <div class="text-sm sm:flex sm:gap-4">
                   <a href="#" class="uppercase font-bold transition-all duration-300 hover:text-amber">Organic</a>
-                  <a href="#" class="text-zorba relative pl-8 inline-block transition-all duration-300 hover:text-gordons-green">April 21, 2020</a>
+                  <a href="#" class="text-zorba relative lg:pl-8 sm:pl-0 inline-block transition-all duration-300 hover:text-gordons-green"
+                    ><span class="sm:hidden block relative -top-0.5 inline-block w-1 h-1 rounded-full bg-zorba mx-4"></span> April 21, 2020</a
+                  >
                 </div>
-                <h3 class="mt-3.5 text-2xl font-bold">
-                  <a href="#" class="transition-all duration-300 line-clamp-2 hover:text-chicago">Top 3 Qualities of a Successful Farm Manager</a>
+                <h3 class="mt-3.5 sm:text-2xl text-xl font-bold">
+                  <a href="#" class="transition-all duration-300 lg:line-clamp-2 hover:text-chicago">Simple Ways to Plan and Execute Your Harvest</a>
                 </h3>
               </div>
             </div>
           </div>
-          <a href="#" class="mt-10 mx-auto table px-8 py-4 bg-amber text-sm font-bold text-white-c uppercase text-center">View more posts</a>
+          <a href="#" class="lg:mt-10 mt-5 mx-auto table lg:px-8 px-4 lg:py-4 py-3 bg-amber text-sm font-bold text-white-c uppercase text-center"
+            >View more posts</a
+          >
         </div>
       </div>
-      <div class="form-hp relative pt-25">
-        <div class="lg:px-15">
-          <div class="flex items-center">
-            <div class="w-1/2">
-              <img src="images/background-1-copyright.jpg" alt="" class="object-cover w-full" />
+      <div class="relative lg:pt-25 pt-15">
+        <div class="lg:px-15 px-4">
+          <div class="flex items-center sm:flex-nowrap flex-wrap sm:gap-0 gap-5">
+            <div class="sm:w-1/2 w-full">
+              <img src="images/background-1-copyright.jpg" alt="" class="object-cover w-full lg:h-161 sm:h-114 h-62.5" />
             </div>
-            <div class="w-1/2 lg:pl-22.5 lg:pr-30">
+            <div class="sm:w-1/2 w-full lg:pl-22.5 lg:pr-30 sm:pl-11">
               <span class="text-sm uppercase font-semibold mt-7">Contact Us</span>
-              <h2 class="lg:text-5xl lg:leading-57 mt-3 font-bold">
-                Have Questions? <br />
-                Get in Touch!
-              </h2>
+              <h2 class="lg:text-5xl text-2xl lg:leading-57 mt-3 font-bold">Have Questions? Get in Touch!</h2>
               <form action="">
-                <div class="grid lg:grid-cols-2 lg:gap-y-5 lg:gap-x-7.5 mt-7.5">
+                <div class="grid lg:grid-cols-2 lg:gap-y-5 lg:gap-x-7.5 lg:mt-7.5 mt-2">
                   <input type="text" placeholder="Name" class="py-2.5 w-full border-b border-solid border-zorba" />
                   <input type="text" placeholder="Last Name" class="py-2.5 w-full border-b border-solid border-zorba" />
                   <input type="email" placeholder="Email" class="py-2.5 w-full border-b border-solid border-zorba" />
@@ -753,21 +855,85 @@
           </div>
         </div>
       </div>
-      <div class="partner-hp relative py-25">
-        <div class="mx-auto max-w-6xl">
-          <div class="grid lg:grid-cols-6">
-            <img src="images/clients-image-copyright-2.webp" alt="" class="object-cover w-full" />
-            <img src="images/clients-image-copyright-3.webp" alt="" class="object-cover w-full" />
-            <img src="images/clients-image-copyright-4.webp" alt="" class="object-cover w-full" />
-            <img src="images/clients-image-copyright-5.webp" alt="" class="object-cover w-full" />
-            <img src="images/clients-image-copyright-6.webp" alt="" class="object-cover w-full" />
-            <img src="images/clients-image-copyright-1.webp" alt="" class="object-cover w-full" />
+      <div class="relative lg:py-25 py-15">
+        <div class="mx-auto max-w-6xl px-4">
+          <div class="grid sm:grid-cols-6 grid-cols-2 lg:gap-0 gap-5">
+            <img src="images/clients-image-copyright-2.webp" alt="" class="object-cover w-full transition-all duration-300 hover:opacity-60" />
+            <img src="images/clients-image-copyright-3.webp" alt="" class="object-cover w-full transition-all duration-300 hover:opacity-60" />
+            <img src="images/clients-image-copyright-4.webp" alt="" class="object-cover w-full transition-all duration-300 hover:opacity-60" />
+            <img src="images/clients-image-copyright-5.webp" alt="" class="object-cover w-full transition-all duration-300 hover:opacity-60" />
+            <img src="images/clients-image-copyright-6.webp" alt="" class="object-cover w-full transition-all duration-300 hover:opacity-60" />
+            <img src="images/clients-image-copyright-1.webp" alt="" class="object-cover w-full transition-all duration-300 hover:opacity-60" />
           </div>
         </div>
       </div>
     </div>
+    <footer class="bg-gordons-green lg:pt-20 pt-15 text-white-c">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="flex gap-4 pb-10 flex-wrap sm:flex-nowrap lg:text-15 sm:text-base">
+          <div class="sm:w-1/3 w-full">
+            <h3 class="lg:text-lg font-semibold mb-4">Hello, We Are Agricola</h3>
+            <p class="text-iron">Ignissimos ducimus qui blanditiis prae sentium voluptatum deleniti.</p>
+          </div>
+          <div class="w-full sm:w-2/3 grid grid-cols-2 sm:grid-cols-3 gap-4 gap-y-8 sm:gap-y-4">
+            <div class="col-span-2 sm:col-span-1">
+              <h3 class="lg:text-lg font-semibold mb-4">Office</h3>
+              <p class="text-iron mb-4">Germany — 785 15h Street, Office 478 Berlin, De 81566</p>
+              <p class="mb-4">
+                <a
+                  href="#"
+                  class="text-iron relative pb-1.5 before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-0 before:h-px before:bg-gordons-green before:transition-all before:duration-300 hover:before:right-full hover:text-white-c"
+                  >info@email.com</a
+                >
+              </p>
+              <p><a href="#" class="lg:text-xl text-lg text-white-c">+1 840 841 25 69</a></p>
+            </div>
+            <div>
+              <h3 class="lg:text-lg font-semibold mb-4">Links</h3>
+              <ul>
+                <li><a href="#" class="text-iron">Home</a></li>
+                <li><a href="#" class="text-iron">Services</a></li>
+                <li><a href="#" class="text-iron">About</a></li>
+                <li><a href="#" class="text-iron">Shop</a></li>
+                <li><a href="#" class="text-iron">Home</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="lg:text-lg font-semibold mb-4">Get in Touch</h3>
+              <ul>
+                <li class="mb-2.5">
+                  <a href="#" class="flex gap-1.5 items-center text-iron transition-all duration-300 hover:text-white-c"
+                    ><i class="fa fa-facebook w-8 h-8 text-center !leading-8" aria-hidden="true"></i><span class="font-medium">Facebook</span>
+                  </a>
+                </li>
+                <li class="mb-2.5">
+                  <a href="#" class="flex gap-1.5 items-center text-iron transition-all duration-300 hover:text-white-c"
+                    ><i class="fa fa-twitter w-8 h-8 text-center !leading-8" aria-hidden="true"></i><span class="font-medium">Twitter</span>
+                  </a>
+                </li>
+                <li class="mb-2.5">
+                  <a href="#" class="flex gap-1.5 items-center text-iron transition-all duration-300 hover:text-white-c"
+                    ><i class="fa fa-dribbble w-8 h-8 text-center !leading-8" aria-hidden="true"></i><span class="font-medium">Dribble</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex gap-1.5 items-center text-iron transition-all duration-300 hover:text-white-c"
+                    ><i class="fa fa-instagram w-8 h-8 text-center !leading-8" aria-hidden="true"></i><span class="font-medium">Instagram</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="py-6 border-t border-solid border-heavy-metal">
+          <p class="text-iron">AxiomThemes © 2026. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script src="js/components/jquery.min.js"></script>
   <script src="js/components/jquery.fancybox.min.js"></script>
   <script src="js/components/swiper-bundle.min.js"></script>
+  <script src="js/components/header.js"></script>
   <script src="js/pages/home.js"></script>
 </html>
