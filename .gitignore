@@ -1,0 +1,15 @@
+# Các thư viện phụ thuộc (Rất nặng, không đẩy lên)
+node_modules/
+
+# Các file log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Các file hệ thống hoặc cấu hình cá nhân
+.DS_Store
+.env
+
+# Các file build (nếu có)
+dist/
+build/
