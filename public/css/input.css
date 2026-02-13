@@ -5,6 +5,7 @@
 @theme {
   --width-4-cols: calc(25% - 15px);
   --color-amber: #f2c200;
+  --color-corn: #dcb000;
   --color-merino: #faf7f0;
   --color-gordons-green: #0a1108;
   --color-gordons-green-20: rgb(10 17 8 / 20%);
@@ -51,6 +52,14 @@
 }
 
 @layer components {
+  .product-gallery__main {
+    .slick-slide {
+      height: auto !important;
+      li {
+        width: inherit !important;
+      }
+    }
+  }
   .progress-line {
     height: 6px;
     width: 100%;
